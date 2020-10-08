@@ -18,7 +18,6 @@ export class Home extends Component{
         fetch(`https://www.googleapis.com/books/v1/volumes?q=${char}&printType=books`)
         .then(data => data.json())
         .then(data => {
-            console.log(data['items'])
             this.setState({books : data['items']})
         })
         this.iniciarListeners()

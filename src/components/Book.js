@@ -5,7 +5,10 @@ export const Book = ({book}) => {
     const {authors} = book.volumeInfo
     return <div className="card horizontal">
                 <div className="card-image">
-                    <img src={book.volumeInfo.imageLinks.thumbnail} alt={book.volumeInfo.title}/>
+                    <img src={
+                        book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : null
+                    } 
+                    alt={book.volumeInfo.title}/>
                 </div>
                 <div className="card-stacked">
                     <div className="card-content">
