@@ -1,7 +1,8 @@
 import React from 'react';
 import methods from '../assets/Methods.js'
+import { Link } from "react-router-dom";
 
-export const Book = ({book}) => {
+export const BookCard = ({book}) => {
     const {authors} = book.volumeInfo
     return <div className="card horizontal">
                 <div className="card-image">
@@ -19,7 +20,7 @@ export const Book = ({book}) => {
                         <p>Published date: {book.volumeInfo.publishedDate || 'Undetermined'}</p>
                     </div>
                     <div className="card-action">
-                        <a href="#">{book.volumeInfo.title}</a>
+                        <Link to={`/book/${book.id}/${book.volumeInfo.title}`}>{book.volumeInfo.title}</Link>
                     </div>
                 </div>
             </div>

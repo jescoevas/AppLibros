@@ -42,7 +42,7 @@ export class Navbar extends Component{
                     </div>
                     <li><NavLink to={'/search'} className="waves-effect">Search</NavLink></li>
                 </ul>
-                <a style={this.menuButton()} data-target="slide-out" className="waves-effect waves-light btn btn-floating sidenav-trigger" ><i className="material-icons">menu</i></a>
+                <button style={this.menuButton()} data-target="slide-out" className="waves-effect waves-light btn btn-floating sidenav-trigger" ><i className="material-icons">menu</i></button>
             </div>
         )
     }

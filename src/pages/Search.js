@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { SearchForm } from '../components/SearchForm'
-import { BookList } from '../components/BookList' 
+import { BookCardList } from '../components/BookCardList' 
 
 export class Search extends Component {
 
@@ -30,7 +30,7 @@ export class Search extends Component {
             <div className="row">
                 <SearchForm className="col s12" results={this.setResults}/>
             </div>
-            <BookList books={books}/>
+            <BookCardList books={books}/>
         </div>
         );
     }
