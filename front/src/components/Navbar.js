@@ -41,6 +41,7 @@ export class Navbar extends Component{
                         <img src="https://tutorialesenlinea.es/uploads/posts/2019-04/1555584802_como-descargar-libros-de-google_tutoriales-en-linea.jpg" height="200px"/>
                     </div>
                     <li><NavLink to={'/search'} className="waves-effect">Search</NavLink></li>
+                    <li><NavLink to={'/signin'} className="waves-effect">Sign in</NavLink></li>
                 </ul>
                 <button style={this.menuButton()} data-target="slide-out" className="waves-effect waves-light btn btn-floating sidenav-trigger" ><i className="material-icons">menu</i></button>
             </div>

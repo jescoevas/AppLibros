@@ -64,7 +64,7 @@ export class Book extends Component {
                                     <td>{book.volumeInfo.pageCount}</td>
                                 </tr>
                                 <tr>
-                                    <td>Pages:</td>
+                                    <td>Published date:</td>
                                     <td>{book.volumeInfo.publishedDate}</td>
                                 </tr>
                                 <tr>

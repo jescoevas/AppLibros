@@ -1,5 +1,5 @@
-const { startServer } = require('./app')
-const { startDatabaseConnection } = require('./database')
+const { startServer } = require('./config/app')
+const { startDatabaseConnection } = require('./config/database')
 
 function main() {
     startDatabaseConnection()

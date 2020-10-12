@@ -27,7 +27,7 @@ export class Search extends Component {
         const {books} = this.state
         return (
         <div>
-            <div className="row">
+            <div className="row" style={{marginTop:'20px'}}>
                 <SearchForm className="col s12" results={this.setResults}/>
             </div>
             <BookCardList books={books}/>
