@@ -73,7 +73,7 @@ export class SignUp extends Component {
                         autoComplete="off"
                         name="user"
                         value={this.state.user}
-                        onChange={e => this.changeInput(e)}
+                        onChange={this.changeInput}
                         required/>
                         <label htmlFor="user">User</label>
                         <small id="userAlreadyExists" style={{color:'red'}}>User already exists</small>
@@ -88,7 +88,7 @@ export class SignUp extends Component {
                         autoComplete="off"
                         name="password"
                         value={this.state.password}
-                        onChange={e => this.changeInput(e)}
+                        onChange={this.changeInput}
                         required/>
                         <label htmlFor="password">Password</label>
                     </div>
@@ -100,7 +100,7 @@ export class SignUp extends Component {
                         autoComplete="off"
                         name="confirmPassword"
                         value={this.state.confirmPassword}
-                        onChange={e => this.changeInput(e)}
+                        onChange={this.changeInput}
                         required/>
                         <label htmlFor="confirmPassword">Confirm password</label>
                         <small id="passwordsDoNotMatch" style={{color:'red'}}>Passwords do not match</small>
@@ -115,7 +115,7 @@ export class SignUp extends Component {
                         autoComplete="off"
                         name="nickname"
                         value={this.state.nickname}
-                        onChange={e => this.changeInput(e)}
+                        onChange={this.changeInput}
                         required/>
                         <label htmlFor="nickname">Nickname</label>
                         <small id="nicknameAlreadyExists" style={{color:'red'}}>Nickname already exists</small>

@@ -33,4 +33,29 @@ userController.newUser = async (req, resp) => {
     }
 }
 
+userController.login = async (req, resp) => {
+    const { user, password } = req.body
+    const users = await User.find({ user })
+        if (users.length > 0) {
+            const userDB = users[0]
+            const match = await bcryptjs.compare(password, userDB.password)
+            if (match) {
+                return resp.json({
+                    msg: 'Found',
+                    userDB
+                })
+            } else {
+                return resp.json({
+                    msg: 'Wrong password',
+                    userDB: {}
+                })
+            }
+        }else {
+            return resp.json({
+                msg: 'Wrong user',
+                userDB: {}
+            })
+        }
+}
+
 module.exports = {userController}
