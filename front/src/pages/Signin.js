@@ -4,8 +4,8 @@ import { Title } from "../components/Title";
 import axios from 'axios'
 
 export class SignIn extends Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
             user:'',
             password:'',
@@ -36,7 +36,7 @@ export class SignIn extends Component {
         }else{
             this.setWrongPassword('none')
             this.setUserDoesNotExist('none')
-            localStorage.setItem('_id', res['data'].userDB._id)
+            this.props.onSignIn(res['data'].userDB._id)
             this.setState({success:true})
         }
     }

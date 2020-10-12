@@ -15,4 +15,6 @@ methods.removeHtml = (value) => {
     }
 }
 
+methods.isLogged = () => localStorage.getItem('_id') ? true : false
+
 export default methods
